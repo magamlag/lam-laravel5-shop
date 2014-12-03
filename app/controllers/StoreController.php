@@ -62,9 +62,6 @@ class StoreController extends \BaseController {
 	}
 
 	public function getCheckout() {
-		/*	echo '<pre>';
-		dd( Cart::contents() );
-		echo '</pre>';*/
 		return View::make( 'store.checkout' )->with( 'products', Cart::contents() );
 	}
 
