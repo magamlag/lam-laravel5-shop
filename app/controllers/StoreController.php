@@ -1,9 +1,10 @@
 <?php
+
 class StoreController extends \BaseController {
 	public function __construct() {
 		parent::__construct();
 		$this->beforeFilter( 'shopauth', array( 'only' => array( 'postAddtocart', 'getCart', 'Updatecart', 'getCheckout', 'getRemoveitem' ) ) );
-		$this->beforeFilter( 'csrf', array( 'on' => 'post' ) );
+//		$this->beforeFilter( 'csrf', array( 'on' => 'post' ) );
 	}
 
 	/**
@@ -61,11 +62,9 @@ class StoreController extends \BaseController {
 	}
 
 	public function getCheckout() {
-
-	/*	echo '<pre>';
-	dd( Cart::contents() );
-	echo '</pre>';*/
-
+		/*	echo '<pre>';
+		dd( Cart::contents() );
+		echo '</pre>';*/
 		return View::make( 'store.checkout' )->with( 'products', Cart::contents() );
 	}
 
@@ -96,7 +95,7 @@ class StoreController extends \BaseController {
 						'created_at' => Carbon::now(),
 						'updated_at' => Carbon::now()
 				] );
-			}//380636268815
+			}
 			return Redirect::to( 'store/index' );
 		}
 		return Redirect::back()->withErrors( $v )->withErrors( $v->getMessageBag() );
@@ -108,7 +107,31 @@ class StoreController extends \BaseController {
 		return Redirect::to( 'store/cart' );
 	}
 
-	/*public function getContact(){
+	public function getContact() {
 		return View::make( 'store.contact' );
-	}*/
+	}
+
+	public function postContact() {
+		$data = Input::all();
+		$rules_contact = array(
+				'name'    => 'required',
+				'email'   => 'required|email',
+				'subject'   => 'required|min:5',
+				'message' => 'required|min:5'
+		);
+
+		$validator = Validator::make( $data, $rules_contact );
+		if ( $validator->passes() ) {
+
+			Mail::send( 'emails.contact', $data, function ( $message ) use ( $data ) {
+				$message->to( $data['email'], $data['name'] )->from( 'lagovskiy@gmail.com' )->subject( $data['subject'] );
+			} );
+			// Redirect to page
+			return Redirect::to( '/' )
+					->with( 'message', 'Your message has been sent. Thank You!' );
+		} else {
+			//return contact form with errors
+			return Redirect::back()->withErrors( $validator )->withErrors( $validator->getMessageBag() );
+		}
+	}
 }

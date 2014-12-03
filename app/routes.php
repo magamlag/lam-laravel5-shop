@@ -34,6 +34,7 @@ Route::post( 'signin', 'NewAccountController@postSignin' );
 	Route::get( '/', [ 'uses' => 'StoreController@getIndex' ] );
 	Route::controller( 'store', 'StoreController' );
 //	Route::controller( 'store/checkout', 'StoreController@getCheckout' );
+	Route::post( 'store/contact', 'StoreController@postContact' );
 	Route::controller( 'admin/categories', 'CategoriesController' );
 	Route::controller( 'admin/products', 'ProductsController' );
 	Route::controller( 'users', 'NewAccountController' );
