@@ -9,17 +9,27 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-/*Route::get( 'register', 'AuthController@getRegister' );
-Route::post( 'register', 'AuthController@postRegister' );
-Route::post( 'search', 'HomeController@search' );*/
+//Route::post( 'search', 'HomeController@search' );
 
+/* User Auth & Registration */
 Route::get( 'signin', 'NewAccountController@getSignin' );
 Route::post( 'signin', 'NewAccountController@postSignin' );
-/* Shop */
+Route::controller( 'users', 'NewAccountController' );
+
+/* Admin Auth */
+Route::get( 'login', 'AuthController@getLogin' );
+Route::post( 'login', 'AuthController@postLogin' );
+Route::get( 'logout', 'AuthController@logout' );
+
+/* Shop - Front end */
 Route::get( '/', [ 'uses' => 'StoreController@getIndex' ] );
 Route::controller( 'store', 'StoreController' );
 //	Route::controller( 'store/checkout', 'StoreController@getCheckout' );
 Route::post( 'store/contact', 'StoreController@postContact' );
-Route::controller( 'admin/categories', 'CategoriesController' );
-Route::controller( 'admin/products', 'ProductsController' );
-Route::controller( 'users', 'NewAccountController' );
+
+/* Admin Panel */
+Route::group( [ 'before' => 'auth', 'prefix' => 'admin' ], function () {
+  Route::get( '/', 'AdminController@index' );
+  Route::controller( 'categories', 'CategoriesController' );
+	Route::controller( 'products', 'ProductsController' );
+} );

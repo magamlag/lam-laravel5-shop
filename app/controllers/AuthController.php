@@ -33,7 +33,7 @@ class AuthController extends BaseController {
 
 	public function getLogin()
 	{
-		return View::make('site.userlogin');
+		return View::make('auth.login');
 	}
 
 	public function postLogin()
