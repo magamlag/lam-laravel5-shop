@@ -16,7 +16,7 @@ class ProductsController extends \BaseController {
 			$categories[$category->id] = $category->name;
 		endforeach;
 
-		return View::make( 'products.index' )->with('products', Product::all())->with('categories', $categories);
+		return View::make( 'admin.products.index' )->with('products', Product::all())->with('categories', $categories);
 	}
 
 	public function postCreate() {

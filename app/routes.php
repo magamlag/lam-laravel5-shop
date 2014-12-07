@@ -32,4 +32,5 @@ Route::group( [ 'before' => 'auth', 'prefix' => 'admin' ], function () {
   Route::get( '/', 'AdminController@index' );
   Route::controller( 'categories', 'CategoriesController' );
 	Route::controller( 'products', 'ProductsController' );
+  Route::resource( 'users', 'UserController' );
 } );
