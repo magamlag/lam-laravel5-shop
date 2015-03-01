@@ -24,6 +24,8 @@
             <div class="form-group">
                 {{ Form::submit('Login', array('class' => 'btn btn-success')) }}
                 {{ HTML::link('/', 'Cancel', array('class' => 'btn btn-danger')) }}
+                {{ HTML::link('social/twitter', 'Authorized by Twitter') }}
+                {{ HTML::link('github', 'Authentication by Github') }}
             </div>
             {{ Form::close() }}
         </div>

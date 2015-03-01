@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -125,8 +125,8 @@ return array(
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Laravel\Cashier\CashierServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
-		'Moltin\Cart\CartServiceProvider'
-
+		'Moltin\Cart\CartServiceProvider',
+		//'SocialiteProviders\Manager\ServiceProvider',
 	),
 
 	/*
@@ -195,7 +195,8 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
 		'Carbon'            => 'Carbon\Carbon',
 		'Image'             => 'Intervention\Image\Facades\Image',
-		'Cart'              => 'Moltin\Cart\Facade'
+		'Cart'              => 'Moltin\Cart\Facade',
+		'Socialite'         => 'Laravel\Socialite\Facades\Socialite',
 	),
 
 );

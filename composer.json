@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*",
+	  	"laravel/framework": "4.2.*@dev",
 		"barryvdh/laravel-ide-helper": "v1.11.3",
 		"laravel/cashier": "~2.0",
 		"intervention/image": "dev-master",
@@ -15,7 +15,9 @@
 		"moltin/currency": "dev-master",
 		"moltin/tax": "dev-master",
 		"moltin/cart": "dev-master",
-		"fzaninotto/faker": "1.5.x-dev"
+		"fzaninotto/faker": "1.5.x-dev",
+		"hybridauth/hybridauth": "dev-master",
+		"laravel/socialite": "dev-master"
 	},
 	"require-dev": {
 		"way/generators": "~2.0"

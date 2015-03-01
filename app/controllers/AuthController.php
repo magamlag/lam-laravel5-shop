@@ -1,5 +1,7 @@
 <?php
 
+use Laravel\Socialite\SocialiteServiceProvidere;
+
 class AuthController extends BaseController {
 
 	public function getRegister()
@@ -61,6 +63,29 @@ class AuthController extends BaseController {
 		
 		return Redirect::to('login')->withErrors($v);
 
+	}
+
+	public function redirectToProvider()
+	{
+		return \Socialite::with('github')->redirect();
+	}
+
+	public function handleProviderCallback()
+	{
+		$user = \Socialite::with('github')->user();
+
+		// OAuth One Providers
+		$token = $user->token;
+		$tokenSecret = $user->tokenSecret;
+		echo $token;
+		/*if(Auth::attempt($credentials)){
+
+			return Redirect::to('admin');
+
+		} else {
+
+			return Redirect::to('login');
+		}*/
 	}
 
 	public function logout()
