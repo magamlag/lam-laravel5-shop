@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use View;
+use App\Models\Product;
 
 class StoreController extends Controller {
 	public function __construct() {
