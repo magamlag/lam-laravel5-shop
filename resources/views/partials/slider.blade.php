@@ -17,8 +17,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									{{ HTML::image('images/home/girl1.jpg', null, ['class' => 'girl img-responsive']) }}
-									{{ HTML::image('images/home/pricing.png', null, ['class' => 'pricing']) }}
+									{!! HTML::image('images/home/girl1.jpg', null, ['class' => 'girl img-responsive']) !!}
+									{!! HTML::image('images/home/pricing.png', null, ['class' => 'pricing']) !!}
 								</div>
 							</div>
 							<div class="item">
@@ -29,8 +29,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-								{{ HTML::image('images/home/girl2.jpg', null, ['class' => 'girl img-responsive']) }}
-                {{ HTML::image('images/home/pricing.png', null, ['class' => 'pricing']) }}
+								{!! HTML::image('images/home/girl2.jpg', null, ['class' => 'girl img-responsive']) !!}
+                {!! HTML::image('images/home/pricing.png', null, ['class' => 'pricing']) !!}
 								</div>
 							</div>
 							
@@ -42,8 +42,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									{{ HTML::image('images/home/girl3.jpg', null, ['class' => 'girl img-responsive']) }}
-                  {{ HTML::image('images/home/pricing.png', null, ['class' => 'pricing']) }}
+									{!! HTML::image('images/home/girl3.jpg', null, ['class' => 'girl img-responsive']) !!}
+                  {!! HTML::image('images/home/pricing.png', null, ['class' => 'pricing']) !!}
 								</div>
 							</div>
 							

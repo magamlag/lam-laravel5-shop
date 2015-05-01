@@ -25,7 +25,7 @@
 						 @foreach($catnav as $cat)
 							<div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title">{{ HTML::link('store/category/' . $cat->id, $cat->name) }}</h4>
+                  <h4 class="panel-title">{!! HTML::link('store/category/' . $cat->id, $cat->name) !!}</h4>
                 </div>
               </div>
              @endforeach
@@ -61,7 +61,7 @@
             </div><!--/price-range-->
 						
 						<div class="shipping text-center"><!--shipping-->
-							{{ HTML::image('images/home/shipping.jpg') }}
+							{!! HTML::image('images/home/shipping.jpg') !!}
 						</div><!--/shipping-->
 					
 					</div>

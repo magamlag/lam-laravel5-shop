@@ -13,7 +13,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										{{ HTML::image('images/home/iframe1.png') }}
+										{!! HTML::image('images/home/iframe1.png') !!}
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -28,7 +28,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										{{ HTML::image('images/home/iframe2.png') }}
+										{!! HTML::image('images/home/iframe2.png') !!}
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -43,7 +43,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										{{ HTML::image('images/home/iframe3.png') }}
+										{!! HTML::image('images/home/iframe3.png') !!}
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -58,7 +58,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										{{ HTML::image('images/home/iframe4.png') }}
+										{!! HTML::image('images/home/iframe4.png') !!}
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -71,7 +71,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-								{{ HTML::image('images/home/map.png') }}
+								{!! HTML::image('images/home/map.png') !!}
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>

@@ -13,19 +13,19 @@
             @foreach($products as $product)
               <div class="col-sm-4">
                   <div class="product-image-wrapper">
-                    <a href="/store/view/{{ $product->id }}">
+                    <a href="/store/view/{!! $product->id !!}">
                         <div class="single-products">
                             <div class="productinfo text-center">
-                              {{ HTML::image($product->image, $product->title,
-                                                 array('class' => 'feature', 'width' => '240', 'height' => '260')) }}
-                              <h2>${{ $product->price }}</h2>
-                              <p>{{ $product->title }}</p>
+                              {!! HTML::image($product->image, $product->title,
+                                                 array('class' => 'feature', 'width' => '240', 'height' => '260')) !!}
+                              <h2>${!! $product->price !!}</h2>
+                              <p>{!! $product->title !!}</p>
                               @include('partials.addtocart')
                             </div>
                             <div class="product-overlay">
                               <div class="overlay-content">
-                                <h2>${{ $product->price }}</h2>
-                                <p>{{ $product->title }}</p>
+                                <h2>${!! $product->price !!}</h2>
+                                <p>{!! $product->title !!}</p>
                                 @include('partials.addtocart')
                               </div>
                             </div>

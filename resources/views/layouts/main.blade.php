@@ -5,7 +5,7 @@
       <hr />
           @if (Session::has('message'))
            <section id="main-content" class="warning clearfix">
-              <p class="alert">{{ Session::get('message') }}</p>
+              <p class="alert">{!! Session::get('message') !!}</p>
            </section><!-- /main-content -->
           @endif
            @if($errors->has())
@@ -13,7 +13,7 @@
                 <p>The following errors have occurred:</p>
                 <ul>
                    @foreach($errors->all() as $error)
-                   <li>{{ $error }}</li>
+                   <li>{!! $error !!}</li>
                    @endforeach
                 </ul>
             </div><!-- /form-errors -->

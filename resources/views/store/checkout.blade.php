@@ -16,18 +16,18 @@
                 <div class="bill-to">
                   <h2>Bill To</h2>
                   <div class="form-one">
-                      {{ Form::open(array('url' => 'store/checkout')) }}
-                        {{ Form::text('email', Input::old('email'), array('placeholder' => 'Email*')) }}
-                        {{ Form::text('title', Input::old('title'), array('placeholder' => 'Title')) }}
-                        {{ Form::text('first_name', Input::old('first_name'), array('placeholder' => 'First Name *')) }}
-                        {{ Form::text('last_name', Input::old('last_name'), array('placeholder' => 'Last Name *')) }}
-                        {{ Form::text('address', Input::old('address'), array('placeholder' => 'Address *')) }}
+                      {!! Form::open(array('url' => 'store/checkout')) !!}
+                        {!! Form::text('email', Input::old('email'), array('placeholder' => 'Email*')) !!}
+                        {!! Form::text('title', Input::old('title'), array('placeholder' => 'Title')) !!}
+                        {!! Form::text('first_name', Input::old('first_name'), array('placeholder' => 'First Name *')) !!}
+                        {!! Form::text('last_name', Input::old('last_name'), array('placeholder' => 'Last Name *')) !!}
+                        {!! Form::text('address', Input::old('address'), array('placeholder' => 'Address *')) !!}
                   </div>
                   <div class="form-two">
-                        {{ Form::text('zip', Input::old('zip'), array('placeholder' => 'Zip / Postal Code *')) }}
-                        {{ Form::text('country', Input::old('country'), array('placeholder' => 'Country')) }}
-                        {{ Form::text('state', Input::old('state'), array('placeholder' => 'State')) }}
-                        {{ Form::text('phone', Input::old('phone'), array('placeholder' => 'Phone *')) }}
+                        {!! Form::text('zip', Input::old('zip'), array('placeholder' => 'Zip / Postal Code *')) !!}
+                        {!! Form::text('country', Input::old('country'), array('placeholder' => 'Country')) !!}
+                        {!! Form::text('state', Input::old('state'), array('placeholder' => 'State')) !!}
+                        {!! Form::text('phone', Input::old('phone'), array('placeholder' => 'Phone *')) !!}
                   </div>
                 </div>
               </div>
@@ -57,27 +57,27 @@
     					 @foreach($products as $product)
     						<tr>
     							<td class="cart_product">
-    								{{ HTML::image($product->image, $product->name, array('width' => '110', 'height' => '110')) }}
+    								{!! HTML::image($product->image, $product->name, array('width' => '110', 'height' => '110')) !!}
     							</td>
     							<td class="cart_description">
-    								<h4>{{$product->name}}</h4>
-    								<p>Web ID: {{ $product->id }}</p>
+    								<h4>{!!$product->name!!}</h4>
+    								<p>Web ID: {!! $product->id !!}</p>
     							</td>
     							<td class="cart_price">
-    								<p>${{ $product->price }}</p>
+    								<p>${!! $product->price !!}</p>
     							</td>
     							<td class="cart_quantity">
     								<div class="cart_quantity_button">
     									<a class="cart_quantity_up" href=""> + </a>
-    									<input class="cart_quantity_input" type="text" name="quantity" value="{{ $product->quantity }}" autocomplete="off" size="2">
+    									<input class="cart_quantity_input" type="text" name="quantity" value="{!! $product->quantity !!}" autocomplete="off" size="2">
     									<a class="cart_quantity_down" href=""> - </a>
     								</div>
     							</td>
     							<td class="cart_total">
-    								<p class="cart_total_price">${{ $product->total() }}</p>
+    								<p class="cart_total_price">${!! $product->total() !!}</p>
     							</td>
     							<td class="cart_delete">
-    								<a class="cart_quantity_delete" href="/store/removeitem/{{ $product->identifier }}"><i class="fa fa-times"></i></a>
+    								<a class="cart_quantity_delete" href="/store/removeitem/{!! $product->identifier !!}"><i class="fa fa-times"></i></a>
     							</td>
     						</tr>
     						@endforeach
@@ -91,7 +91,7 @@
 											</tr>
 											<tr>
 												<td>Total</td>
-												<td><span>${{ Cart::total(false); }}</span></td>
+												<td><span>${!! Cart::total(false); !!}</span></td>
 											</tr>
 										</table>
 									</td>
@@ -108,9 +108,9 @@
     		<div class="container">
     			<div class="row">
           				<div class="col-sm-6">
-          						{{ HTML::link('/', 'Continue Shopping', array('class' => 'btn btn-default check_out')) }}
-          						{{ Form::submit('Process Payment', array('class' => 'btn btn-default check_out')) }}
-                     {{ Form::close() }}
+          						{!! HTML::link('/', 'Continue Shopping', array('class' => 'btn btn-default check_out')) !!}
+          						{!! Form::submit('Process Payment', array('class' => 'btn btn-default check_out')) !!}
+                     {!! Form::close() !!}
           				</div>
           				<div class="col-sm-6">
           					&nbsp;

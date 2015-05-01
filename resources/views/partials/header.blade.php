@@ -14,16 +14,16 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    {{ HTML::style('css/bootstrap.min.css') }}
-    {{ HTML::style('css/font-awesome.min.css') }}
-    {{ HTML::style('css/price-range.css') }}
-    {{ HTML::style('css/animate.css') }}
-    {{ HTML::style('css/main.css') }}
-    {{ HTML::style('css/responsive.css') }}
+    {!! HTML::style('css/bootstrap.min.css') !!}
+    {!! HTML::style('css/font-awesome.min.css') !!}
+    {!! HTML::style('css/price-range.css') !!}
+    {!! HTML::style('css/animate.css') !!}
+    {!! HTML::style('css/main.css') !!}
+    {!! HTML::style('css/responsive.css') !!}
 
         <!--[if lt IE 9]>
-    {{ HTML::script('js/html5shiv.js') }}
-    {{ HTML::script('js/respond.min.js') }}
+    {!! HTML::script('js/html5shiv.js') !!}
+    {!! HTML::script('js/respond.min.js') !!}
         <![endif]-->
 
     <link rel="shortcut icon" href="images/ico/favicon.ico">

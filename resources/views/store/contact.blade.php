@@ -15,7 +15,7 @@
 	    			<div class="contact-form">
 	    				<h2 class="title text-center">Get In Touch</h2>
 	    				<div class="status alert alert-success" style="display: none"></div>
-				    	   {{ Form::open(array('url' => 'store/contact'), ['name'=>'contact-form','class'=>'contact-form row','id'=>'main-contact-form']) }}
+				    	   {!! Form::open(array('url' => 'store/contact'), ['name'=>'contact-form','class'=>'contact-form row','id'=>'main-contact-form']) !!}
 				            <div class="form-group col-md-6">
 				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
 				            </div>

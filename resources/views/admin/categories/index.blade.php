@@ -8,11 +8,11 @@
     <ul>
       @foreach($categories as $category)
       <li>
-        {{$category->name}} -
-        {{ Form::open(['url'=>'admin/categories/destroy', 'class'=>'form-inline']) }}
-        {{ Form::hidden('id', $category->id) }}
-        {{ Form::submit('delete') }}
-        {{ Form::close() }}
+        {!!$category->name!!} -
+        {!! Form::open(['url'=>'admin/categories/destroy', 'class'=>'form-inline']) !!}
+        {!! Form::hidden('id', $category->id) !!}
+        {!! Form::submit('delete') !!}
+        {!! Form::close() !!}
       </li>
       @endforeach
     </ul>
@@ -23,19 +23,19 @@
         <p>The following errors have occurred</p>
         <ul>
           @foreach($errors->all() as $error)
-            <li>{{ $error }}</li>
+            <li>{!! $error !!}</li>
           @endforeach
         </ul>
       </div><!-- /#form-errors -->
       @endif
 
-      {{ Form::open(['url'=>'admin/categories/create']) }}
+      {!! Form::open(['url'=>'admin/categories/create']) !!}
       <p>
-        {{ Form::label('name') }}
-        {{ Form::text('name') }}
+        {!! Form::label('name') !!}
+        {!! Form::text('name') !!}
       </p>
-      {{ Form::submit('Create Category',['class'=>'secondary-cart-btn']) }}
-      {{ Form::close() }}
+      {!! Form::submit('Create Category',['class'=>'secondary-cart-btn']) !!}
+      {!! Form::close() !!}
   </div><!-- /#admin -->
 
 @stop
