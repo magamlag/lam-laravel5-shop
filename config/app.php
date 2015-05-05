@@ -146,6 +146,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+
 	],
 
 	/*
@@ -192,10 +194,10 @@ return [
 		'Storage'   => 'Illuminate\Support\Facades\Storage',
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
-		'View'      => 'Illuminate\Support\Facades\View',
-		'Form'=> 'Illuminate\Html\FormFacade',
-		'HTML'=> 'Illuminate\Html\HtmlFacade'
-
+		'View' 			=> 'Illuminate\Support\Facades\View',
+		'Form' 			=> 'Illuminate\Html\FormFacade',
+		'HTML' 			=> 'Illuminate\Html\HtmlFacade',
+		'Cart' 			=> 'Gloudemans\Shoppingcart\Facades\Cart',
 	],
 
 ];
