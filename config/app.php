@@ -147,6 +147,13 @@ return [
 		'App\Providers\RouteServiceProvider',
 
 		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+/*			'Way\Generators\GeneratorsServiceProvider',
+			'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+			'Laravel\Cashier\CashierServiceProvider',
+			'Intervention\Image\ImageServiceProvider',
+			'Moltin\Cart\CartServiceProvider',*/
+		//'SocialiteProviders\Manager\ServiceProvider',
+
 
 	],
 
@@ -198,6 +205,11 @@ return [
 		'Form' 			=> 'Illuminate\Html\FormFacade',
 		'HTML' 			=> 'Illuminate\Html\HtmlFacade',
 		'Cart' 			=> 'Gloudemans\Shoppingcart\Facades\Cart',
+/*		'Carbon'            => 'Carbon\Carbon',
+		'Image'             => 'Intervention\Image\Facades\Image',
+		'Cart'              => 'Moltin\Cart\Facade',
+		'Socialite'         => 'Laravel\Socialite\Facades\Socialite',*/
+
 	],
 
 ];

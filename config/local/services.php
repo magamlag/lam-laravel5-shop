@@ -1,37 +1,20 @@
 <?php
 
-return [
-
+return array(
 	/*
 	|--------------------------------------------------------------------------
 	| Third Party Services
 	|--------------------------------------------------------------------------
 	|
 	| This file is for storing the credentials for third party services such
-	| as Stripe, Mailgun, Mandrill, and others. This file provides a sane
+	| as Stripe. This file provides a sane
 	| default location for this type of information, allowing packages
 	| to have a conventional place to find your various credentials.
 	|
 	*/
-
-	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
-	],
-
-	'mandrill' => [
-		'secret' => '',
-	],
-
-	'ses' => [
-		'key' => '',
-		'secret' => '',
-		'region' => 'us-east-1',
-	],
-
 	'stripe' => [
-			'model'  => 'User',
-			'secret' => 'sk_live_WES8c8XdaPjdpNE1oWrKRzod',
+		'secret' => 'sk_test_sZgTSmS5dVdGRWEbucRHMIPP',
+		'public' => 'pk_test_xOQpWUR1LyXPo14jlsJuQ2Hi',
 	],
 
 	'github' => [
@@ -40,5 +23,4 @@ return [
 			'redirect' => 'http://lam-ecommerce.and/github/callback',
 	],
 
-
-];
+);
