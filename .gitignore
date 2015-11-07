@@ -1,4 +1,10 @@
-/vendor
+/bootstrap/compiled.php
 /node_modules
-.env
+/vendor
 .idea/
+.env.*.php
+.env.php
+.DS_Store
+composer.phar
+composer.lock
+Thumbs.db
