@@ -2,8 +2,8 @@
 /node_modules
 /vendor
 .idea/
-.env.*.php
-.env.php
+.env.*
+.env
 .DS_Store
 composer.phar
 composer.lock
