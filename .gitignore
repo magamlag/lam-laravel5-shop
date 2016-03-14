@@ -7,5 +7,4 @@
 .DS_Store
 composer.phar
 composer.lock
-services.php
-Thumbs.db
+/storage
