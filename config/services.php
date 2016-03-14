@@ -31,13 +31,13 @@ return [
 
 	'stripe' => [
 			'model'  => 'User',
-			'secret' => Config::get('STRIPE_SECRET'),
+			'secret' => getenv('STRIPE_SECRET'),
 	],
 
 	'github' => [
-			'client_id' => Config::get('GITHUB_CLIENT_ID'),
-			'client_secret' => Config::get('GITHUB_CLIENT_SECRET'),
-			'redirect' => Config::get('CALLBACK_REDIRECT'),
+			'client_id' => getenv('GITHUB_CLIENT_ID'),
+			'client_secret' => getenv('GITHUB_CLIENT_SECRET'),
+			'redirect' => getenv('CALLBACK_REDIRECT'),
 	],
 
 
