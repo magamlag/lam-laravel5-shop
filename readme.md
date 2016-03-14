@@ -12,7 +12,7 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
 
 ## Short Description
 
-Was created like demo. Contains everything for using with different items.
+This site was created like demo. However can be easily use in real project.
 
 ### License
 
