@@ -1,11 +1,12 @@
 <?php
 namespace App\Http\Controllers;
+
 /**
  * Class UserController
  *
  * Add/Edit/Delete users - BackEnd
  */
-class UserController extends \AdminController {
+class UserController extends AdminController {
 
 	/**
 	 * Display a listing of the resource.
