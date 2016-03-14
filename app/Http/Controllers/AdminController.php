@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
-class AdminController extends BaseController {
+use View;
+
+class AdminController extends Controller {
 
 	public function index()
 	{
