@@ -1,8 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 use Laravel\Socialite\SocialiteServiceProvidere;
+use View, Validator, Input, Auth, Redirect;
 
-class AuthController extends BaseController {
+class AuthController extends Controller {
 
 	public function getRegister()
 	{
