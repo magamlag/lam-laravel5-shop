@@ -10,10 +10,10 @@
    						{!! Form::open(['url' => 'users/signin']) !!}
                  {!! Form::email('email', Input::old('email'), ['placeholder'=>'Email']) !!}
                  {!! Form::password('password', ['placeholder'=>'Password']) !!}
-   							{!!--<span>
+   							<span>
    								<input type="checkbox" class="checkbox" />
    								Keep me signed in
-   							</span>--!!}
+   							</span>
    						  {!! Form::button('Sign In', ['type' => 'submit', 'class' => 'btn btn-default']) !!}
                {!! Form::close() !!}
                <h4>{!! HTML::link('users/newaccount', 'Create new account', ['class' => 'btn-default']) !!}</h4>
