@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse {!!--navbar-fixed-top--!!}" role="navigation">
+    <nav class="navbar navbar-inverse {{--navbar-fixed-top--}}" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -37,7 +37,7 @@
           <ul class="nav navbar-nav">
            <li>{!! HTML::link('admin/products', 'Products') !!}</li>
            <li>{!! HTML::link('admin/categories', 'Categories') !!}</li>
-            <li>{!! link_to_route('users.index', 'Users') !!}</li>
+            <li>{!! link_to_route('admin.users.index', 'Users') !!}</li>
             <li>{!! HTML::link('logout', 'Logout') !!}</li>
           </ul>
         </div><!-- /.navbar-collapse -->
