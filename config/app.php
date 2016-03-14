@@ -147,6 +147,7 @@ return [
 		'App\Providers\RouteServiceProvider',
 
 		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 /*			'Way\Generators\GeneratorsServiceProvider',
 			'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 			'Laravel\Cashier\CashierServiceProvider',
