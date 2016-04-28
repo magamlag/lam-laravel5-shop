@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
-use View;
+use App\Models\User;
+use View, Validator;
 /**
  * Class NewAccountController
  *
@@ -17,7 +18,7 @@ class NewAccountController extends Controller {
 	}
 
 	public function postCreate() {
-		$validator = Validator::make( Input::all(), User::$rules );
+		$validator = Validator::make( \Input::all(), User::$rules );
 
 		if ( $validator->fails() ) {
 			return Redirect::to( 'users/newaccount' )
