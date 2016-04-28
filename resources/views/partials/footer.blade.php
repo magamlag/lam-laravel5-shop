@@ -148,7 +148,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2014 SHOP. DEMO</p>
+					<p class="pull-left">Copyright © {{ \Carbon\Carbon::now()->year }} SHOP. DEMO</p>
 				</div>
 			</div>
 		</div>
