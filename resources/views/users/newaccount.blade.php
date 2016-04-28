@@ -19,13 +19,13 @@
                 @endif
                 {!! Form::open(['url'=>'users/create']) !!}
                   {!! Form::label('username') !!}
-                  {!! Form::text('username', 'Username') !!}
+                  {!! Form::text('username', null, ['placeholder'=>'Username']) !!}
                   {!! Form::label('email') !!}
                   {!! Form::email('email', null, ['placeholder'=>'Email']) !!}
                   {!! Form::label('password') !!}
                   {!! Form::password('password', ['placeholder'=>'Password']) !!}
                   {!! Form::label('tel') !!}
-                  {!! Form::text('tel', 'Telephone') !!}
+                  {!! Form::text('tel', null, ['placeholder'=>'Phone']) !!}
                  {!! Form::button('Create New Account', [ 'type' => 'submit', 'class'=>'btn btn-default']) !!}
                 {!! Form::close() !!}
            </div><!--/login-form-->
