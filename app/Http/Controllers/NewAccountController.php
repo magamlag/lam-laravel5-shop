@@ -1,8 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\User;
-use View, Validator;
-use Request;
+use View, Validator, Hash, Request, Auth;
 
 /**
  * Class NewAccountController
@@ -23,7 +22,7 @@ class NewAccountController extends Controller {
 		$validator = Validator::make( Request::all(), User::$rules );
 
 		if ( $validator->fails() ) {
-			return Redirect::to( 'users/newaccount' )
+			return redirect( 'users/newaccount' )
 					->with( 'message', 'Something went wrong' )
 					->withErrors( $validator )
 					->withInput();
@@ -37,7 +36,7 @@ class NewAccountController extends Controller {
 		}
 		$user->save();
 
-		return Redirect::to( 'users/signin' )
+		return redirect( 'users/signin' )
 				->with( 'message', 'Your account has been created successfully. Please sign in' );
 	}
 
@@ -47,16 +46,16 @@ class NewAccountController extends Controller {
 
 	public function postSignin() {
 		if ( Auth::attempt( array( 'email' => Request::input( 'email' ), 'password' => Request::input( 'password' ) ) ) ) {
-			return Redirect::to( '' )
+			return redirect( '/' )
 					->with( 'message', 'Thanks for signin in' );
 		}
-		return Redirect::to( 'users/signin' )
+		return redirect( 'users/signin' )
 				->with( 'message', 'Your email/password combination was incorrect' );
 	}
 
 	public function getSignout() {
 		Auth::logout();
-		return Redirect::to( 'users/signin' )
+		return redirect( 'users/signin' )
 				->with( 'message', 'You have been signed out' );
 	}
 }
