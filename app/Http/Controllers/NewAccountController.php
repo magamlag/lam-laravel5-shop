@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use View, Validator;
+use Request;
+
 /**
  * Class NewAccountController
  *
@@ -18,7 +20,7 @@ class NewAccountController extends Controller {
 	}
 
 	public function postCreate() {
-		$validator = Validator::make( \Input::all(), User::$rules );
+		$validator = Validator::make( Request::all(), User::$rules );
 
 		if ( $validator->fails() ) {
 			return Redirect::to( 'users/newaccount' )
@@ -27,11 +29,11 @@ class NewAccountController extends Controller {
 					->withInput();
 		}
 		$user           = new User;
-		$user->username = Input::get( 'username' );
-		$user->email    = Input::get( 'email' );
-		$user->password = Hash::make( Input::get( 'password' ) );
-		if ( Input::get( 'tel' ) ) {
-			$user->tel = Input::get( 'tel' );
+		$user->username = Request::input( 'username' );
+		$user->email    = Request::input( 'email' );
+		$user->password = Hash::make( Request::input( 'password' ) );
+		if ( Request::input( 'tel' ) ) {
+			$user->tel = Request::input( 'tel' );
 		}
 		$user->save();
 
@@ -44,7 +46,7 @@ class NewAccountController extends Controller {
 	}
 
 	public function postSignin() {
-		if ( Auth::attempt( array( 'email' => Input::get( 'email' ), 'password' => Input::get( 'password' ) ) ) ) {
+		if ( Auth::attempt( array( 'email' => Request::input( 'email' ), 'password' => Request::input( 'password' ) ) ) ) {
 			return Redirect::to( '' )
 					->with( 'message', 'Thanks for signin in' );
 		}
